@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>testing mysqltest</title>
+    </head>
+
+    <body onload="sheriff()">
+
+
+        <h1>mysqltest html file</h1>
+
+        <div style="width: 70%; height: 800px; background-color: powderblue; margin: 20px auto;">
+
+
+        <img src="/europa.png" alt="euro">
+        
+        </div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla reprehenderit beatae perspiciatis. 
+            Iusto quasi rem quaerat, consequatur magni quo! Iure laborum dolor voluptates aperiam illum sed 
+            esse numquam veniam ad!
+        </p>
+        <p>kdh iush uh olmg ilse lkrm ;i a;rooa;<span id="change">olatunji</span> piihaprh ppestj</p>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+        <script>
+            async function sheriff() {
+                try {
+                    let {data : response} = await axios.get('/data');
+                    document.querySelector('#change').innerHTML = response.name
+                } catch (err) {
+                    console.log(err)
+                    alert('Wahala ooo!')
+                }
+            }
+        </script>
+    </body>
+
+
+</html>

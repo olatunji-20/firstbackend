@@ -1,0 +1,11 @@
+{
+  "name": "servertest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "servertestt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sheriff",
+  "license": "ISC"
+}

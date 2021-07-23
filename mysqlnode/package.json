@@ -1,0 +1,16 @@
+{
+  "name": "mysqlnode",
+  "version": "1.0.0",
+  "description": "practising mysql with nodejs",
+  "main": "mysqlnode.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "falana sheriff",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {}
+}

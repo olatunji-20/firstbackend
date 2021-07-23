@@ -1,0 +1,93 @@
+body {
+        background-color: powderblue;
+}
+a {
+        text-decoration: none;
+        color: white;
+        font-size: 40px;
+}
+.tunji {
+        background-color: orange;
+        width: 300px;
+        height: 300px;
+        padding: 20px;
+        border: 4px solid blue;
+        margin: 30px;
+}
+
+.upper {
+        background-color: pink;
+        width: 300px;
+        height: 300px;
+        border: 20px solid black;
+}
+
+.middle {
+        background-color: tomato;
+        width: 300px;
+        height: 300px;
+        border: 20px solid black;
+        margin-left: 340px;
+}
+
+.lower {
+        background-color: green;
+        width: 300px;
+        height: 300px;
+        border: 20px solid black;
+        margin-left: 680px;
+}
+
+.liver {
+        background-color: red;
+        width: 150px;
+        display: inline-block;
+        text-align: center;
+}
+.man {
+        background-color: blue;
+        width: 150px;
+        display: inline-block;
+}
+.lei {
+        background-color: green;
+        width: 150px;
+        display: inline-block;
+}
+.chel {
+        background-color: yellow;
+        width: 150px;
+        display: inline-block;
+}
+.shef {
+        background-color: purple;
+        width: 150px;
+        display: inline-block;
+}
+.manu {
+        background-color: pink;
+        width: 150px;
+        display: inline-block;
+}
+.red {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        left: 0px;
+        top: 0px;
+}
+.blue {
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        left: 100px;
+}
+.yellow {
+        background-color: yellow;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        left: 200px;
+}

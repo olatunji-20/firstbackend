@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>form for mysql</title>
+      <!--  <link rel="stylesheet" href="mysqlform.css" type="text/css"> -->
+
+<style>
+    * {
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: aqua;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+}
+.maindiv {
+    background-color: floralwhite;
+    width: 65%;
+    margin: 40px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+input {
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 20px 10px;
+    display: inline-block;
+    text-indent: 20px;
+    background-color: wheat;
+}
+
+.submitt {
+    width: 150px;
+    margin-left: 0px;
+    background: mediumblue;
+    color: wheat
+}
+
+
+</style>
+
+
+
+    </head>
+
+    <body>
+
+        
+        <h1>MySql FORM</h1>
+        <P>Here is a form created for <span id="sub">submitting</span> form datas into a mysql database.</P>
+
+        <div class="maindiv">
+            <form action="/" method="post" id="signupForm">
+
+                
+                <input type="text" placeholder="id" name="id"> 
+
+               
+                <input type="text" placeholder="first name" name="firstName" id="fname" required aria-required="true">
+
+                
+                <input type="text" placeholder="surname" name="surName" id="sname">
+
+                
+                <input type="email" placeholder="your email" name="email" id="email">
+
+
+                <input type="number" placeholder="Phone no" name="phone" id="phone">
+
+
+                <input type="date" placeholder="Date of birth" name="dob" id="dob">
+
+                
+                <input type="password" placeholder="password" name="password" id="password">
+
+                
+                <input type="text" placeholder="state of origin" name="state" id="state">
+
+            </form>
+            <button class="" type="button" onclick="submit()">Submit</button>
+        </div>
+
+
+
+
+
+
+
+        <script>
+
+        function submit() {
+            if (firstFunc() && secFunc() && phoner() && passworder()) {
+                var signUpForm = document.getElementById("signupForm");
+
+                if (signUpForm.reportValidity()) {
+                    signUpForm.submit();
+                }
+            } else {
+                alert('How far');
+            }
+        }
+
+        // MAINLY REGEX
+        // MAINLY REGEX
+        // MAINLY REGEX
+        // MAINLY REGEX
+
+        function firstFunc() {
+            //makes sure the the name starts with uppercase while the rest may be upper case or no
+            var firstNamer = document.getElementById("fname").value;
+
+            var firstRegex = /^[A-Z]+[a-z]*/g;
+
+            var nameTest = firstRegex.test(firstNamer);
+
+            if(nameTest == true) {
+                alert("name okay...");
+                return true;
+            }else {
+                alert("something wrong with name...");
+            }
+            return false;
+        };
+
+        function secFunc() {
+            //makes sure the the name starts with uppercase while the rest may be upper case or no
+            var secNamer = document.getElementById("sname").value;
+
+            var secRegex = /^[A-Z]+[a-z]*/g;
+
+            var name2Test = secRegex.test(secNamer);
+
+
+                if(name2Test == true) {
+                    alert("surname okay...");
+                    return true;
+                }else {
+                    alert("something wrong with sur name...");
+                }
+                return false;
+            };
+
+
+        function phoner() {
+
+            //makes sure the phone number isnt longer or shorter than 11
+            var len = document.getElementById("phone").value.length;
+
+            if(len > 11 ) {
+                alert("phone.no length is too long...");
+            }else if (len < 11) {
+                alert("phone no length is too short...");
+            }else {
+                alert("phone no is okay...");
+                return true;
+            }
+            return false;
+        };
+
+
+            //A Password that starts with an uppercase letter, contains any other letters then ends with number(s)
+
+        function passworder() {
+
+            var passw = document.getElementById("password").value;
+
+            var thirdReg = /^[A-Z]+\w[0-9]*/;
+
+            var passTest = thirdReg.test(passw);
+
+            if(passTest == true) {
+                alert("password is okay...");
+                return true;
+            }else {
+                alert("password is not okay...");
+            }
+            return false;
+        };
+        
+
+
+
+        </script>
+
+
+    </body>
+</html>
